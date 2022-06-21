@@ -54,7 +54,6 @@ public class BaseClass
 		
 		if(BROWSER.equalsIgnoreCase("chrome"))
 		{
-			WebDriverManager.chromedriver().setup();
 			driver=new ChromeDriver();
 		}else if(BROWSER.equalsIgnoreCase("firefox"))
 		{

@@ -36,7 +36,7 @@ public class CreateContactsTest extends BaseClass{
 		//enter the first name,Last name and click on save button
 		CreateNewContactPage cnpage=new CreateNewContactPage(driver);
 		cnpage.enterContactInfo(FirstName, LastName);
-		Assert.fail();
+		//Assert.fail();
 		
 		//verify whether the Contacts is created or not
 		ContactsInfoPage cipage=new ContactsInfoPage(driver);

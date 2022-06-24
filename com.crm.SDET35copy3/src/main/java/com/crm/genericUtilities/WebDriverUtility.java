@@ -18,6 +18,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
 
 import com.google.common.io.Files;
 
@@ -27,6 +28,7 @@ import com.google.common.io.Files;
  *
  */
 public class WebDriverUtility {
+	public static Object takeScreenShot;
 	/**
 	 *it will wait for 10 seconds till the page gets load.
 	 * @param driver
@@ -230,12 +232,13 @@ public void clickOnEnterButton(WebDriver driver)
  * @param screenShotName
  * @throws Throwable
  */
-public void takeScreenShot(WebDriver driver,String screenShotName)throws Throwable
+public static String takeScreenShot(WebDriver driver,String screenShotName)throws Throwable
 {
 	TakesScreenshot takeScreenShot = (TakesScreenshot)driver;
 	File src = takeScreenShot.getScreenshotAs(OutputType.FILE);
 	File dst = new File("./screenShot/"+screenShotName+".PNG");
 	Files.copy(src, dst);
+	return screenShotName;
 }
 /**
  * it is used to perform scrollBar Actions
@@ -245,5 +248,9 @@ public void scrollBarAction(WebDriver driver)
 {
 	JavascriptExecutor javaScript = (JavascriptExecutor)driver;
 	javaScript.executeScript("window.scrollBy(0,500)");
+}
+public static String takeScreenShot(WebDriver sdriver, ITestResult result) {
+	// TODO Auto-generated method stub
+	return null;
 }
 }

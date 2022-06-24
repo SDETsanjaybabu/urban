@@ -1,6 +1,7 @@
 package com.crm.createOrganisation;
 
 import org.testng.Reporter;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -10,7 +11,7 @@ import com.crm.objectRepository.HomePage;
 import com.crm.objectRepository.OrganisationInfoPage;
 import com.crm.objectRepository.OrganisationPage;
 
-//@Listeners(com.crm.genericUtilities.ItestListenerImtn.class)
+@Listeners(com.crm.genericUtilities.ItestListenerImtn.class)
 public class CreateOrganizationWithIndustryAndTypeTest extends BaseClass{
 	@Test(retryAnalyzer = com.crm.genericUtilities.RetryAnalyserImptn.class)
 	public void createOrganizationWithIndustryAndTypeTest() throws Throwable 

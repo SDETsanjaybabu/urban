@@ -57,7 +57,6 @@ public class BaseClass
 		{
 			ChromeOptions chromeOptions=new ChromeOptions();
 			chromeOptions.setBinary("C:\\Users\\SanjayBabu\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");
-		
 			driver=new ChromeDriver(chromeOptions);
 		}else if(BROWSER.equalsIgnoreCase("firefox"))
 		{
